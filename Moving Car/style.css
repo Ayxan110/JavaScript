@@ -1,0 +1,27 @@
+.btn{
+    height: 140px;
+    border-radius: 100%;
+    width: 140px;
+    outline: none;
+    margin-top: 40px;
+    border: none;
+    font-size: 30px;
+    margin-right: 55px;
+    font-weight: bold;
+}
+.btn:active{
+    transform: translateY(10px);
+}
+.main{
+    width: 100%;
+    background-color: #8c7ae6;
+}
+.btn-start{
+    background-color: #4cd137
+}
+.btn-stop{
+    background-color: #e84118
+}
+.btn-restart{
+    background-color: #fbc531
+}

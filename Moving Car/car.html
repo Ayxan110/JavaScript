@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  </style>
+</head>
+
+<body>
+
+  <script id="scr">
+    let div = document.createElement("div");
+    document.body.insertBefore(div, document.getElementById("scr"));
+    div.className = "main"
+    let div2 = document.createElement("div");
+    document.body.insertBefore(div2, document.getElementById("scr"));
+    let image = document.createElement("img");
+    image.src = "mario.gif"
+    image.style.height = "200px"
+    image.style.marginLeft = 0;
+    div.appendChild(image);
+    let start = document.createElement("button");
+    start.classList.add("btn");
+    start.classList.add("btn-start");
+    start.innerText = "Start";
+    div2.appendChild(start);
+    let stop = document.createElement("button");
+    stop.classList.add("btn");
+    stop.classList.add("btn-stop");
+    stop.innerText = "Stop";
+    div2.appendChild(stop);
+    let restart = document.createElement("button");
+    restart.classList.add("btn");
+    restart.classList.add("btn-restart");
+    restart.innerText = "Restart";
+    div2.appendChild(restart);
+    let interval = null;
+    let isTrue = false;
+    start.addEventListener("click", function () {
+      if (!isTrue) {
+        interval = setInterval(function () {
+        let asdd = document.querySelector("img");
+        let mg = parseInt(asdd.style.marginLeft);
+        mg += 10;
+        asdd.style.marginLeft = `${mg}px`  
+        }, 100)
+        isTrue=true;
+        console.log(interval
+        
+        )
+      }
+    })
+    stop.addEventListener("click", function () {
+      clearInterval(interval);
+      isTrue = false
+    })
+    restart.addEventListener("click", function () {
+      isTrue=false;
+      clearInterval(interval);
+      let asdd = document.querySelector("img");
+      asdd.style.marginLeft = 0;
+    })
+  </script>
+</body>
+
+</html>
