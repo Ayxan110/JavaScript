@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+
+    <script>
+        function createElement(element, className, parentChild, srctext, innerText) {
+            let newElement = document.createElement(element);
+            newElement.className = className;
+            newElement.src = srctext;
+            newElement.innerText = innerText;
+            document.getElementsByClassName(parentChild)[0].appendChild(newElement);
+            return element;
+        }
+
+
+        function createDiv(element, className) {
+            let newElement = document.createElement(element);
+            newElement.className = className;
+            document.body.appendChild(newElement);
+            return element;
+        }
+
+        function createAdditionalDiv(element, className, parentChild) {
+            let newElement = document.createElement(element);
+            newElement.className = className;
+            document.getElementsByClassName(parentChild)[0].appendChild(newElement);
+            return element;
+        }
+
+
+
+        let maindiv = createDiv("div", "maindiv");
+        let imagepart = createAdditionalDiv("div", "image-header", "maindiv")
+        createElement("img", "logo", "image-header", "/expresspay_site.jpg", null);
+        createElement("div", "serviceschoice", "maindiv", null, "XİDMƏTİ SEÇİN");
+        let main = createAdditionalDiv("div", "main", "maindiv");
+        createElement("button", "header-buttons", "main", null, "expressbank");
+        createElement("button", "header-buttons", "main", null, "bakcell");
+        createElement("button", "header-buttons", "main", null, "nar");
+        createElement("button", "header-buttons", "main", null, "azərenerji");
+        createElement("button", "header-buttons", "main", null, "azərsu");
+        createElement("button", "header-buttons", "main", null, "ailətv");
+        createElement("button", "header-buttons", "main", null, "embafinans");
+        let services = createAdditionalDiv("div", "services", "maindiv");
+        createElement("button", "main-buttons", "services", null, "Bank xidmətləri");
+        createElement("button", "main-buttons", "services", null, "Mobil operatorlar");
+        createElement("button", "main-buttons", "services", null, "Komunal xidmətlər");
+        createElement("button", "main-buttons", "services", null, "Kabel TV");
+        createElement("button", "main-buttons", "services", null, "Internet");
+        createElement("button", "main-buttons", "services", null, "Əyləncə");
+        let footerpart = createAdditionalDiv("footer", "footerpart", "maindiv");
+        let languagepart = createAdditionalDiv("div", "languagepart", "footerpart");
+        createElement("img", "flags", "languagepart", "/Flag_of_Great_Britain_(1707–1800).svg", null);
+        createElement("img", "flags", "languagepart", "/Flag_of_Azerbaijan.svg", null);
+        createElement("img", "flags", "languagepart", "/20120812153730!Flag_of_Russia.svg", null);
+        let hotline = createAdditionalDiv("div", "hotline", "footerpart");
+    </script>
+</body>
+
+</html>
