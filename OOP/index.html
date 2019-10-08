@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let form = [
+            {
+                label: "Enter your name",
+                inputname: { type: "text", classname: " name" }
+            },
+            {
+                label: "Enter your email",
+                inputname: { type: "text", classname: "email" }
+            },
+            {
+                label: "Select a number of people, you work with",
+                inputname: { type: "text", classname: "select" },
+                options: ["3", "5", "7", "10"]
+            },
+            {
+                label: "Enter your profession",
+                inputname: { type: "textarea", classname: "textarea" },
+            }
+        ]
+
+        for (let f in form) {
+            let labels = document.createElement('label');
+            labels.innerText = form[f].label;
+            document.body.appendChild(labels);
+            if (form[f].inputname.classname == "select") {
+                let element = document.createElement("select");
+                for (let k in form[f].options) {
+                    let option = document.createElement("option");
+                    option.text = form[f].options[k];
+                    element.add(option);
+                }
+                document.body.appendChild(element);
+            }
+            else {
+                let inputs = document.createElement('input');
+                inputs.setAttribute('type', form[f].inputname.type);
+                inputs.setAttribute('class', form[f].inputname.classname);
+                document.body.appendChild(inputs);
+            }
+        }
+    </script>
+</body>
+
+</html>
