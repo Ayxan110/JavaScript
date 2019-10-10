@@ -1,0 +1,33 @@
+.card {
+  width: 22rem;
+  display: inline-block;
+}
+
+.img-part {
+  position: relative;
+}
+
+.badge, .far, .price {
+  position: absolute;
+}
+
+img {
+  height: 230px;
+}
+
+.km, .litre, .year {
+  display: inline-block;
+}
+
+.aa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container {
+  margin-top: 100px;
+}
+/*# sourceMappingURL=style.css.map */

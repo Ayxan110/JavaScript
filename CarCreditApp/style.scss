@@ -1,0 +1,23 @@
+.card{
+    width: 22rem;
+    display: inline-block;
+}
+.img-part{
+    position: relative;
+}
+.badge,.far,.price{
+    position: absolute;
+}
+img{
+    height: 230px;
+}
+.km,.litre,.year{
+    display: inline-block;
+}
+.aa{
+    display: flex;
+    justify-content: space-around;
+}
+.container{
+    margin-top: 100px;
+}

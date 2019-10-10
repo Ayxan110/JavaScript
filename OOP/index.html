@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -13,7 +14,7 @@
         let form = [
             {
                 label: "Enter your name",
-                inputname: { type: "text", classname: " name" }
+                inputname: { type: "text", classname: "name" }
             },
             {
                 label: "Enter your email",
@@ -42,6 +43,10 @@
                     element.add(option);
                 }
                 document.body.appendChild(element);
+            }
+            else if (form[f].inputname.classname == "textarea") {
+                let element1 = document.createElement("textarea");
+                document.body.appendChild(element1);
             }
             else {
                 let inputs = document.createElement('input');
