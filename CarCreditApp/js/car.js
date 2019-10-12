@@ -44,126 +44,117 @@ function addCarElement(carPrice, carName, carYear, carLitre, carKm, carImage) {
     characteristics.appendChild(year);
     characteristics.appendChild(litre);
     characteristics.appendChild(km);
+    return card;
 }
 
 
-let cars = [
+let cars = {
 
-    Car1 = {
+    Car1: {
         name: "Lamborghini Urus",
         price: "120000$",
         year: "2017",
         km: "20000 km",
         litre: "6.8 L",
-        carimg: "lamborghini-urus-8_1.jpg"
+        carimg: "/img/urus.jpg"
     },
-    Car2 = {
+    Car2: {
         name: "Mercedes AMG",
         price: "32000$",
         year: "2010",
         km: "20000 km",
         litre: "4.8 L",
-        carimg: "2018-mercedes-amg-gt-c-gt-s-120-1559582335.jpg"
+        carimg: "/img/amg.jpg"
     },
-    Car3 = {
+    Car3: {
         name: "Cadillac",
         price: "110000$",
         year: "2019",
         km: "10000 km",
         litre: "7.8 L",
-        carimg: "1d9b9a8e898f49f3ada242f552b4fbec.jpg"
+        carimg: "/img/cadillac.jpg"
     },
-    Car4 = {
+    Car4: {
+        name: "Proche 911 Trubo",
+        price: "68000$",
+        year: "2014",
+        km: "20000 km",
+        litre: "5.6 L",
+        carimg: "/img/911.jpg"
+    },
+    Car5: {
         name: "Mercedes",
         price: "68000$",
         year: "2014",
         km: "20000 km",
         litre: "5.6 L",
-        carimg: "image.MQ6.8.20190722182858.jpeg"
+        carimg: "/img/urus.jpg"
     },
-    Car4 = {
+    Car6: {
         name: "Mercedes",
         price: "68000$",
         year: "2014",
         km: "20000 km",
         litre: "5.6 L",
-        carimg: "image.MQ6.8.20190722182858.jpeg"
+        carimg: "/img/cadillac.jpg"
     },
-    Car4 = {
+    Car7: {
         name: "Mercedes",
         price: "68000$",
         year: "2014",
         km: "20000 km",
         litre: "5.6 L",
-        carimg: "image.MQ6.8.20190722182858.jpeg"
+        carimg: "/img/911.jpg"
     },
-    Car4 = {
+    Car8: {
         name: "Mercedes",
         price: "68000$",
         year: "2014",
         km: "20000 km",
         litre: "5.6 L",
-        carimg: "image.MQ6.8.20190722182858.jpeg"
+        carimg: "/img/amg.jpg"
     },
-    Car4 = {
+    Car9: {
         name: "Mercedes",
         price: "68000$",
         year: "2014",
         km: "20000 km",
         litre: "5.6 L",
-        carimg: "image.MQ6.8.20190722182858.jpeg"
+        carimg: "/img/cadillac.jpg"
     },
-    Car4 = {
+    Car10: {
         name: "Mercedes",
         price: "68000$",
         year: "2014",
         km: "20000 km",
         litre: "5.6 L",
-        carimg: "image.MQ6.8.20190722182858.jpeg"
+        carimg: "/img/cadillac.jpg"
     },
-    Car4 = {
+    Car11: {
         name: "Mercedes",
         price: "68000$",
         year: "2014",
         km: "20000 km",
         litre: "5.6 L",
-        carimg: "image.MQ6.8.20190722182858.jpeg"
+        carimg: "/img/amg.jpg"
     },
-    Car4 = {
+    Car12: {
         name: "Mercedes",
         price: "68000$",
         year: "2014",
         km: "20000 km",
         litre: "5.6 L",
-        carimg: "image.MQ6.8.20190722182858.jpeg"
+        carimg: "/img/urus.jpg"
     },
-    Car4 = {
-        name: "Mercedes",
-        price: "68000$",
-        year: "2014",
-        km: "20000 km",
-        litre: "5.6 L",
-        carimg: "image.MQ6.8.20190722182858.jpeg"
-    },
-]
-
-for (let f in cars) {
-    addCarElement(cars[f].price, cars[f].name, cars[f].year, cars[f].litre, cars[f].km, cars[f].carimg);
-    if (f>=11 && f % 11 == 0) {
-        console.log("AWW YEAHH");
-    }
 }
 
+ for (let f in cars) {
+    let abc=addCarElement(cars[f].price, cars[f].name, cars[f].year, cars[f].litre, cars[f].km, cars[f].carimg);
+    abc.addEventListener('click',function () {
+        localStorage.clear();
+        let z = JSON.stringify(cars[f]);
+        localStorage.setItem('cardclicked', z);
+        document.location = 'card.html';
+})
+ }
 
-
-
-
-
-
-{/* <ul class="pagination">
-  <li><a href="#">1</a></li>
-  <li><a href="#">2</a></li>
-  <li><a href="#">3</a></li>
-  <li><a href="#">4</a></li>
-  <li><a href="#">5</a></li>
-</ul> */}
