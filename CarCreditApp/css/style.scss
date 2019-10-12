@@ -1,3 +1,6 @@
+*{
+    list-style: none;
+}
 .card{
     width: 22rem;
     display: inline-block;
@@ -20,4 +23,23 @@ img{
 }
 .container{
     margin-top: 100px;
+}
+.ul,.ul2{
+    display: inline-block;
+}
+table{
+    height: 35px;
+    td{
+    }
+}
+.aa{
+    font-size: 15px;
+    font-weight: bold;
+}
+.container{
+    margin: auto;
+    margin-top: 100px;
+}
+.table td{
+    padding: 0.5rem;
 }
