@@ -3,7 +3,7 @@ function addCarElement(carPrice, carName, carYear, carLitre, carKm, carImage) {
     let imgpart = document.createElement("div");
     let cardbody = document.createElement("div");
     let img = document.createElement("img");
-    //let icon = document.createElement("i");
+    let icon = document.createElement("i");
     let span = document.createElement("span");
     let price = document.createElement("div");
     let priceText = document.createElement("p");
@@ -17,26 +17,26 @@ function addCarElement(carPrice, carName, carYear, carLitre, carKm, carImage) {
     year.innerText = carYear;
     litre.innerText = carLitre;
     km.innerText = carKm;
-    //span.innerText = "SALON"
+    span.innerText = "SALON"
     img.src = carImage;
     card.className = "card"
     imgpart.className = "img-part"
     cardbody.className = "card-body"
-    //icon.className = "far fa-heart"
+    icon.className = "far fa-heart"
     price.className = "price"
     model.className = "card-title"
     year.className = "year"
     litre.className = "litre"
     km.className = "km"
-    //span.className = "badge badge-primary"
+    span.className = "badge badge-primary"
     img.className = "card-img-top"
     characteristics.className = "aa"
     document.getElementsByClassName("container")[0].appendChild(card);
     card.appendChild(imgpart);
     card.appendChild(cardbody);
     imgpart.appendChild(img);
-    //imgpart.appendChild(icon);
-    //imgpart.appendChild(span);
+    imgpart.appendChild(icon);
+    imgpart.appendChild(span);
     imgpart.appendChild(price);
     price.appendChild(priceText);
     cardbody.appendChild(model)

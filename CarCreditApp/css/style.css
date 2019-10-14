@@ -56,4 +56,11 @@ table {
 .table td {
   padding: 0.5rem;
 }
+
+.credit, th, td, tr {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */

@@ -29,8 +29,6 @@ img{
 }
 table{
     height: 35px;
-    td{
-    }
 }
 .aa{
     font-size: 15px;
@@ -42,4 +40,13 @@ table{
 }
 .table td{
     padding: 0.5rem;
+}
+#credit,th,td,tr{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+.price{
+    background-color: red;
 }
